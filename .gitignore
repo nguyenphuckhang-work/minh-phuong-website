@@ -1,0 +1,7 @@
+# Source PDFs are large (100MB+) — keep them out of git
+*.pdf
+.DS_Store
+_old-site/
+ui-ux/
+# stray duplicate not referenced by the site
+logo-minhphuong.png
