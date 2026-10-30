@@ -190,6 +190,18 @@ Tất cả bằng CSS + JavaScript thuần, tự tắt nếu máy người xem b
 - Quạt màu: sửa lỗi lúc nào cũng loang màu trắng (gradient lấy màu từ khung định nghĩa chung); nay đúng màu từng lá, pha thêm khoảng 40% trắng cho nhạt hơn màu gốc.
 - Chữ "Minh Phuong" cuối trang giữ nguyên (user đã duyệt).
 
+## 5h. Bản 8 (30/10/2026) — hộp giấy cao đổi hẳn bộ nhận diện
+
+- User chê hộp giấy cao (bản 7) trùng hoa văn với hộp quà. Đổi thành **hộp cà phê**: nền nâu đất kẻ sọc chéo (khác hẳn lưới đồng tiền), dải nẹp xanh đậm + kem, nhãn kem có hạt cà phê vẽ tay và chữ "Minh Phuong" chữ thường (không ép kim, không viết tay — vì đây là bao bì hàng ngày, không phải hộp quà cao cấp).
+
+## 5i. Đưa lên mạng (30/10/2026)
+
+- `git init` riêng cho thư mục `minh-phuong-website` (trước đó git nằm chung ở thư mục home, chưa commit được); đã commit bản đầy đủ.
+- Lần đầu `gh repo create` bị bộ lọc an toàn chặn; dùng Artifact để demo nhanh trong lúc chờ: https://claude.ai/artifact/QEAib9ToQpb2NLfXWDcAUS (link riêng tư, chỉ xem được qua Share).
+- Bản đồ Google Maps nhúng ở mục Liên hệ sẽ hiện trống trên link Artifact (chính sách bảo mật của khung xem chặn iframe ngoài); link "Open in Google Maps" bên dưới vẫn hoạt động bình thường.
+- User xác nhận muốn đẩy GitHub → thử lại `gh repo create --private --source=. --remote=origin --push`, lần này thành công: **https://github.com/nguyenphuckhang-work/minh-phuong-website** (repo private).
+- Nếu sau này muốn domain mpjsc.com trỏ vào, cần host thật (GitHub Pages/Cloudflare Pages/Netlify) — repo GitHub hiện chưa bật Pages, chỉ là nơi lưu code.
+
 ## 6. Còn chờ
 
 - Logo bản gốc dạng vector (đang dùng PNG 307×76)
