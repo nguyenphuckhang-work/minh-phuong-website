@@ -199,8 +199,10 @@ Tất cả bằng CSS + JavaScript thuần, tự tắt nếu máy người xem b
 - `git init` riêng cho thư mục `minh-phuong-website` (trước đó git nằm chung ở thư mục home, chưa commit được); đã commit bản đầy đủ.
 - Lần đầu `gh repo create` bị bộ lọc an toàn chặn; dùng Artifact để demo nhanh trong lúc chờ: https://claude.ai/artifact/QEAib9ToQpb2NLfXWDcAUS (link riêng tư, chỉ xem được qua Share).
 - Bản đồ Google Maps nhúng ở mục Liên hệ sẽ hiện trống trên link Artifact (chính sách bảo mật của khung xem chặn iframe ngoài); link "Open in Google Maps" bên dưới vẫn hoạt động bình thường.
-- User xác nhận muốn đẩy GitHub → thử lại `gh repo create --private --source=. --remote=origin --push`, lần này thành công: **https://github.com/nguyenphuckhang-work/minh-phuong-website** (repo private).
-- Nếu sau này muốn domain mpjsc.com trỏ vào, cần host thật (GitHub Pages/Cloudflare Pages/Netlify) — repo GitHub hiện chưa bật Pages, chỉ là nơi lưu code.
+- User xác nhận muốn đẩy GitHub → thử lại `gh repo create --private --source=. --remote=origin --push`, lần này thành công: https://github.com/nguyenphuckhang-work/minh-phuong-website.
+- GitHub Pages không bật được trên repo private ở gói miễn phí (lỗi "current plan does not support GitHub Pages"). User chọn chuyển repo sang **public** để dùng Pages miễn phí → đã đổi visibility + bật Pages.
+- **Link web chính thức (live):** https://nguyenphuckhang-work.github.io/minh-phuong-website/ — đã kiểm tra chạy đúng (hộp quà + hộp cà phê 3D, không lỗi console).
+- Lưu ý: repo giờ là public, nghĩa là mã nguồn ai cũng xem được trên GitHub (không phải chỉ trang web). Nếu sau này muốn domain mpjsc.com trỏ vào, chỉ cần thêm CNAME trỏ vào GitHub Pages này.
 
 ## 6. Còn chờ
 
