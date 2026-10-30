@@ -204,6 +204,14 @@ Tất cả bằng CSS + JavaScript thuần, tự tắt nếu máy người xem b
 - **Link web chính thức (live):** https://nguyenphuckhang-work.github.io/minh-phuong-website/ — đã kiểm tra chạy đúng (hộp quà + hộp cà phê 3D, không lỗi console).
 - Lưu ý: repo giờ là public, nghĩa là mã nguồn ai cũng xem được trên GitHub (không phải chỉ trang web). Nếu sau này muốn domain mpjsc.com trỏ vào, chỉ cần thêm CNAME trỏ vào GitHub Pages này.
 
+## 5j. Mô hình máy in (30/10/2026)
+
+- Theo yêu cầu: thêm mô hình tờ in đi qua máy in 6 màu UV, cùng kiểu với dây chuyền trên web Tobapak, không ghi tên máy trên mô hình.
+- Mô hình nằm đầu phần Nhà xưởng, rộng hết màn hình. Phần Nhà xưởng được đưa lên trước quạt màu, menu đổi theo. Code ở `assets/js/pressline.js`.
+- Tờ in lấy từ bàn nạp, qua 6 đơn vị (C, M, Y, K, 2 màu pha), đơn vị tráng phủ, đèn UV, rồi xuống bàn ra giấy. Tờ in đổi màu đúng tại từng đơn vị, chạy một lần khi cuộn tới, có nút In lại. Màn hình hẹp thì khung hình đi theo tờ in.
+- Hai màu pha (vàng kim, cam) chỉ để minh họa, không phải màu cố định của máy.
+- Link xem thử: https://minh-phuong-website.vercel.app/ (đăng từ máy bằng `vercel deploy --prod`, có `noindex` trên địa chỉ `.vercel.app`). Link GitHub Pages cũ chưa có mô hình cho tới khi đẩy code lên GitHub.
+
 ## 6. Còn chờ
 
 - Logo bản gốc dạng vector (đang dùng PNG 307×76)

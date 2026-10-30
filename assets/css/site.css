@@ -2108,3 +2108,125 @@ body {
 }
 
 
+
+
+/* ---------- factory: the press across the whole page ---------- */
+
+#factory .section-head {
+  margin-bottom: 8px;
+}
+
+.pressline {
+  position: relative;
+  width: 100%;
+  max-width: 2100px;
+  margin: 0 auto;
+  aspect-ratio: 1930 / 722;
+}
+
+.pressline canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pressline-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+  position: relative;
+  z-index: 1;
+}
+
+.pl-again {
+  padding: 6px 14px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: none;
+  font-size: 0.85rem;
+  color: var(--paper-dim);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.pl-again:hover {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+#factory:has(.pressline.is-done) .pl-again {
+  visibility: visible;
+}
+
+/* on a wide screen each stage is named under its unit, inside the drawing */
+.pl-steps {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.pl-steps li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--paper-mute);
+  opacity: 0.55;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.pl-steps li[data-state="on"] {
+  opacity: 1;
+  color: var(--paper);
+}
+
+.pl-steps li[data-state="done"] {
+  opacity: 0.85;
+}
+
+.pl-steps i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--paper-mute);
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.pl-steps li:nth-child(2) i { background: var(--c); }
+.pl-steps li:nth-child(3) i { background: var(--m); }
+.pl-steps li:nth-child(4) i { background: var(--y); }
+.pl-steps li:nth-child(5) i { background: var(--k); }
+.pl-steps li:nth-child(6) i { background: #d6ac52; }
+.pl-steps li:nth-child(7) i { background: #f05a28; }
+.pl-steps li:nth-child(9) i { background: #b67bff; }
+
+@media (max-width: 1099px) {
+  .pressline {
+    aspect-ratio: auto;
+    height: clamp(290px, 62vw, 520px);
+    touch-action: pan-y;
+    cursor: grab;
+  }
+
+  .pl-steps {
+    display: flex;
+  }
+
+  .pressline-bar {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 2100px) {
+  .pressline {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+}

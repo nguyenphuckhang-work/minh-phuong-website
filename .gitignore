@@ -5,3 +5,4 @@ _old-site/
 ui-ux/
 # stray duplicate not referenced by the site
 logo-minhphuong.png
+.vercel

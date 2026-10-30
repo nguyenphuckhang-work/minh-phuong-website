@@ -24,7 +24,7 @@
   <!-- fonts load without holding up the first paint; text shows in a fallback face until they arrive -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=Great+Vibes&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=Great+Vibes&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap"></noscript>
-  <link rel="stylesheet" href="../assets/css/site.css?v=27">
+  <link rel="stylesheet" href="../assets/css/site.css?v=28">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,8 +61,8 @@
         <a href="#products">Sản phẩm</a>
         <a href="#work">Mẫu đã in</a>
         <a href="#finishes">Gia công</a>
-        <a href="#colour">Màu sắc</a>
         <a href="#factory">Nhà xưởng</a>
+        <a href="#colour">Màu sắc</a>
         <a href="#process">Quy trình</a>
         <a href="#certificates">Chứng nhận</a>
         <a href="#contact">Liên hệ</a>
@@ -229,48 +229,21 @@
       </div>
     </section>
 
-    <section class="section" id="colour">
-      <!-- the ink you point at on the fan washes out across the section; two layers so one colour can fade as the next spreads.
-           Each layer keeps its own gradient: currentColor in a gradient follows the svg the gradient lives in. -->
-      <svg class="bloom-defs" width="0" height="0" aria-hidden="true" focusable="false">
-        <defs>
-          <filter id="bleed" x="-30%" y="-30%" width="160%" height="160%">
-            <feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="3" seed="8"/>
-            <feDisplacementMap in="SourceGraphic" scale="60"/>
-          </filter>
-        </defs>
-      </svg>
-      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-a"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-a)" filter="url(#bleed)"/></svg>
-      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-b"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-b)" filter="url(#bleed)"/></svg>
-      <div class="wrap colour-grid">
-        <div>
-          <div class="section-head">
-            <h2 class="h2">Màu chuẩn, đo bằng máy.</h2>
-            <p class="lede">Màu được đo bằng máy chứ không nhìn bằng mắt. Chế bản và máy in liên kết qua CIP4, tờ in được đo bằng thiết bị X-Rite, mực pha theo thông số L*a*b* trong dung sai ΔE cho phép.</p>
-          </div>
-          <p class="colour-note">Thông số của từng đơn hàng được lưu lại, nên đơn in lại mùa sau vẫn khớp màu lần đầu. Quy trình của chúng tôi đạt chứng nhận ISO 12647 và được GMI đánh giá cho các nhà bán lẻ tại Mỹ.</p>
-        </div>
-        <figure class="fan-wrap">
-          <ol class="fan" aria-label="Thông số màu in chuẩn">
-              <li class="fan-card" style="--i: 0; --ink: #f3f2ec"><span class="fan-ink"></span><b>Giấy trắng</b><span>Giấy</span><span>L* 95 a* 0 b* −2</span></li>
-              <li class="fan-card" style="--i: 1; --ink: #0093d3"><span class="fan-ink"></span><b>Cyan</b><span>C 100</span><span>L* 55 a* −37 b* −50</span></li>
-              <li class="fan-card" style="--i: 2; --ink: #d6007a"><span class="fan-ink"></span><b>Magenta</b><span>M 100</span><span>L* 48 a* 74 b* −3</span></li>
-              <li class="fan-card" style="--i: 3; --ink: #ffe600"><span class="fan-ink"></span><b>Vàng</b><span>Y 100</span><span>L* 89 a* −5 b* 93</span></li>
-              <li class="fan-card" style="--i: 4; --ink: #df2a2e"><span class="fan-ink"></span><b>Đỏ</b><span>M 100 Y 100</span><span>L* 47 a* 68 b* 48</span></li>
-              <li class="fan-card" style="--i: 5; --ink: #009a5b"><span class="fan-ink"></span><b>Xanh lá</b><span>C 100 Y 100</span><span>L* 50 a* −65 b* 27</span></li>
-              <li class="fan-card" style="--i: 6; --ink: #2c3487"><span class="fan-ink"></span><b>Xanh dương</b><span>C 100 M 100</span><span>L* 24 a* 22 b* −46</span></li>
-              <li class="fan-card" style="--i: 7; --ink: #2a2827"><span class="fan-ink"></span><b>Đen</b><span>K 100</span><span>L* 16 a* 0 b* 0</span></li>
-          </ol>
-          <figcaption class="small">Thông số màu in chuẩn trên giấy couché, theo ISO 12647-2:2004</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section class="section" id="factory">
       <div class="wrap">
         <div class="section-head">
           <h2 class="h2">Heidelberg từ kẽm đến máy in.</h2>
+          <p class="lede">Máy in UV in 6 màu và một lớp phủ trong cùng một lượt. Mỗi đơn vị in một màu, đèn UV làm khô tờ in trước khi xuống chồng giấy.</p>
         </div>
+      </div>
+      <figure class="pressline">
+        <canvas aria-hidden="true"></canvas>
+      </figure>
+      <div class="wrap pressline-bar">
+        <ol class="pl-steps" aria-label="Tờ in đi qua máy in"><li><i></i>Bàn nạp giấy</li><li><i></i>Cyan</li><li><i></i>Magenta</li><li><i></i>Yellow</li><li><i></i>Black</li><li><i></i>Màu pha</li><li><i></i>Màu pha</li><li><i></i>Tráng phủ</li><li><i></i>Đèn UV</li><li><i></i>Bàn ra giấy</li></ol>
+        <button class="pl-again" type="button">In lại</button>
+      </div>
+      <div class="wrap">
         <div class="factory-grid">
           <div class="factory-text">
             <p>Công ty Cổ phần In Minh Phương thành lập năm 2006 với mong muốn nâng chất lượng in trong nước. Từ đó đến nay chúng tôi xây nhà xưởng mới, liên tục đầu tư máy in và hệ thống chế bản Heidelberg, áp dụng các tiêu chuẩn màu sắc và chất lượng mà thương hiệu quốc tế yêu cầu.</p>
@@ -306,6 +279,43 @@
             </dl>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="colour">
+      <!-- the ink you point at on the fan washes out across the section; two layers so one colour can fade as the next spreads.
+           Each layer keeps its own gradient: currentColor in a gradient follows the svg the gradient lives in. -->
+      <svg class="bloom-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="bleed" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="3" seed="8"/>
+            <feDisplacementMap in="SourceGraphic" scale="60"/>
+          </filter>
+        </defs>
+      </svg>
+      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-a"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-a)" filter="url(#bleed)"/></svg>
+      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-b"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-b)" filter="url(#bleed)"/></svg>
+      <div class="wrap colour-grid">
+        <div>
+          <div class="section-head">
+            <h2 class="h2">Màu chuẩn, đo bằng máy.</h2>
+            <p class="lede">Màu được đo bằng máy chứ không nhìn bằng mắt. Chế bản và máy in liên kết qua CIP4, tờ in được đo bằng thiết bị X-Rite, mực pha theo thông số L*a*b* trong dung sai ΔE cho phép.</p>
+          </div>
+          <p class="colour-note">Thông số của từng đơn hàng được lưu lại, nên đơn in lại mùa sau vẫn khớp màu lần đầu. Quy trình của chúng tôi đạt chứng nhận ISO 12647 và được GMI đánh giá cho các nhà bán lẻ tại Mỹ.</p>
+        </div>
+        <figure class="fan-wrap">
+          <ol class="fan" aria-label="Thông số màu in chuẩn">
+              <li class="fan-card" style="--i: 0; --ink: #f3f2ec"><span class="fan-ink"></span><b>Giấy trắng</b><span>Giấy</span><span>L* 95 a* 0 b* −2</span></li>
+              <li class="fan-card" style="--i: 1; --ink: #0093d3"><span class="fan-ink"></span><b>Cyan</b><span>C 100</span><span>L* 55 a* −37 b* −50</span></li>
+              <li class="fan-card" style="--i: 2; --ink: #d6007a"><span class="fan-ink"></span><b>Magenta</b><span>M 100</span><span>L* 48 a* 74 b* −3</span></li>
+              <li class="fan-card" style="--i: 3; --ink: #ffe600"><span class="fan-ink"></span><b>Vàng</b><span>Y 100</span><span>L* 89 a* −5 b* 93</span></li>
+              <li class="fan-card" style="--i: 4; --ink: #df2a2e"><span class="fan-ink"></span><b>Đỏ</b><span>M 100 Y 100</span><span>L* 47 a* 68 b* 48</span></li>
+              <li class="fan-card" style="--i: 5; --ink: #009a5b"><span class="fan-ink"></span><b>Xanh lá</b><span>C 100 Y 100</span><span>L* 50 a* −65 b* 27</span></li>
+              <li class="fan-card" style="--i: 6; --ink: #2c3487"><span class="fan-ink"></span><b>Xanh dương</b><span>C 100 M 100</span><span>L* 24 a* 22 b* −46</span></li>
+              <li class="fan-card" style="--i: 7; --ink: #2a2827"><span class="fan-ink"></span><b>Đen</b><span>K 100</span><span>L* 16 a* 0 b* 0</span></li>
+          </ol>
+          <figcaption class="small">Thông số màu in chuẩn trên giấy couché, theo ISO 12647-2:2004</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -469,8 +479,9 @@
     </figure>
   </dialog>
 
-  <script src="../assets/js/press.js?v=27" defer></script>
-  <script src="../assets/js/main.js?v=27" defer></script>
-  <script src="../assets/js/effects.js?v=27" defer></script>
+  <script src="../assets/js/press.js?v=28" defer></script>
+  <script src="../assets/js/pressline.js?v=28" defer></script>
+  <script src="../assets/js/main.js?v=28" defer></script>
+  <script src="../assets/js/effects.js?v=28" defer></script>
 </body>
 </html>

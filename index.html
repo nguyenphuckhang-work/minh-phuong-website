@@ -23,7 +23,7 @@
   <!-- fonts load without holding up the first paint; text shows in a fallback face until they arrive -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=Great+Vibes&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=Great+Vibes&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=27">
+  <link rel="stylesheet" href="assets/css/site.css?v=28">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,8 +60,8 @@
         <a href="#products">Products</a>
         <a href="#work">Work</a>
         <a href="#finishes">Finishes</a>
-        <a href="#colour">Colour</a>
         <a href="#factory">Factory</a>
+        <a href="#colour">Colour</a>
         <a href="#process">Process</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
@@ -228,48 +228,21 @@
       </div>
     </section>
 
-    <section class="section" id="colour">
-      <!-- the ink you point at on the fan washes out across the section; two layers so one colour can fade as the next spreads.
-           Each layer keeps its own gradient: currentColor in a gradient follows the svg the gradient lives in. -->
-      <svg class="bloom-defs" width="0" height="0" aria-hidden="true" focusable="false">
-        <defs>
-          <filter id="bleed" x="-30%" y="-30%" width="160%" height="160%">
-            <feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="3" seed="8"/>
-            <feDisplacementMap in="SourceGraphic" scale="60"/>
-          </filter>
-        </defs>
-      </svg>
-      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-a"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-a)" filter="url(#bleed)"/></svg>
-      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-b"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-b)" filter="url(#bleed)"/></svg>
-      <div class="wrap colour-grid">
-        <div>
-          <div class="section-head">
-            <h2 class="h2">Colour on target.</h2>
-            <p class="lede">We measure colour instead of judging it by eye. Prepress and presses are linked through CIP4, sheets are read with X-Rite instruments, and inks are mixed to L*a*b* targets within a set ΔE.</p>
-          </div>
-          <p class="colour-note">The settings for every job are saved, so a reprint next season matches the first run. Our process is certified to ISO 12647 and audited by GMI for retailers in the United States.</p>
-        </div>
-        <figure class="fan-wrap">
-          <ol class="fan" aria-label="Process colour targets">
-              <li class="fan-card" style="--i: 0; --ink: #f3f2ec"><span class="fan-ink"></span><b>Paper white</b><span>Paper</span><span>L* 95 a* 0 b* −2</span></li>
-              <li class="fan-card" style="--i: 1; --ink: #0093d3"><span class="fan-ink"></span><b>Cyan</b><span>C 100</span><span>L* 55 a* −37 b* −50</span></li>
-              <li class="fan-card" style="--i: 2; --ink: #d6007a"><span class="fan-ink"></span><b>Magenta</b><span>M 100</span><span>L* 48 a* 74 b* −3</span></li>
-              <li class="fan-card" style="--i: 3; --ink: #ffe600"><span class="fan-ink"></span><b>Yellow</b><span>Y 100</span><span>L* 89 a* −5 b* 93</span></li>
-              <li class="fan-card" style="--i: 4; --ink: #df2a2e"><span class="fan-ink"></span><b>Red</b><span>M 100 Y 100</span><span>L* 47 a* 68 b* 48</span></li>
-              <li class="fan-card" style="--i: 5; --ink: #009a5b"><span class="fan-ink"></span><b>Green</b><span>C 100 Y 100</span><span>L* 50 a* −65 b* 27</span></li>
-              <li class="fan-card" style="--i: 6; --ink: #2c3487"><span class="fan-ink"></span><b>Blue</b><span>C 100 M 100</span><span>L* 24 a* 22 b* −46</span></li>
-              <li class="fan-card" style="--i: 7; --ink: #2a2827"><span class="fan-ink"></span><b>Black</b><span>K 100</span><span>L* 16 a* 0 b* 0</span></li>
-          </ol>
-          <figcaption class="small">Process colour targets for coated paper, ISO 12647-2:2004</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section class="section" id="factory">
       <div class="wrap">
         <div class="section-head">
           <h2 class="h2">Heidelberg from plate to press.</h2>
+          <p class="lede">Our UV press prints six colours and a coat of varnish in one pass. Each unit lays down one colour, and UV lamps cure the sheet before it reaches the delivery pile.</p>
         </div>
+      </div>
+      <figure class="pressline">
+        <canvas aria-hidden="true"></canvas>
+      </figure>
+      <div class="wrap pressline-bar">
+        <ol class="pl-steps" aria-label="A sheet passing through the press"><li><i></i>Feeder</li><li><i></i>Cyan</li><li><i></i>Magenta</li><li><i></i>Yellow</li><li><i></i>Black</li><li><i></i>Spot colour</li><li><i></i>Spot colour</li><li><i></i>Coating</li><li><i></i>UV lamps</li><li><i></i>Delivery</li></ol>
+        <button class="pl-again" type="button">Print again</button>
+      </div>
+      <div class="wrap">
         <div class="factory-grid">
           <div class="factory-text">
             <p>Minh Phuong Printing was founded in 2006 to raise the standard of printing in Vietnam. Since then we have built a new factory, kept investing in Heidelberg presses and prepress, and adopted the colour and quality rules that international brands expect.</p>
@@ -305,6 +278,43 @@
             </dl>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="colour">
+      <!-- the ink you point at on the fan washes out across the section; two layers so one colour can fade as the next spreads.
+           Each layer keeps its own gradient: currentColor in a gradient follows the svg the gradient lives in. -->
+      <svg class="bloom-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="bleed" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency=".012 .018" numOctaves="3" seed="8"/>
+            <feDisplacementMap in="SourceGraphic" scale="60"/>
+          </filter>
+        </defs>
+      </svg>
+      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-a"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-a)" filter="url(#bleed)"/></svg>
+      <svg class="bloom" viewBox="-100 -100 200 200" preserveAspectRatio="none" aria-hidden="true"><radialGradient id="bloom-ink-b"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset=".5" stop-color="currentColor" stop-opacity=".45"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient><circle r="88" fill="url(#bloom-ink-b)" filter="url(#bleed)"/></svg>
+      <div class="wrap colour-grid">
+        <div>
+          <div class="section-head">
+            <h2 class="h2">Colour on target.</h2>
+            <p class="lede">We measure colour instead of judging it by eye. Prepress and presses are linked through CIP4, sheets are read with X-Rite instruments, and inks are mixed to L*a*b* targets within a set ΔE.</p>
+          </div>
+          <p class="colour-note">The settings for every job are saved, so a reprint next season matches the first run. Our process is certified to ISO 12647 and audited by GMI for retailers in the United States.</p>
+        </div>
+        <figure class="fan-wrap">
+          <ol class="fan" aria-label="Process colour targets">
+              <li class="fan-card" style="--i: 0; --ink: #f3f2ec"><span class="fan-ink"></span><b>Paper white</b><span>Paper</span><span>L* 95 a* 0 b* −2</span></li>
+              <li class="fan-card" style="--i: 1; --ink: #0093d3"><span class="fan-ink"></span><b>Cyan</b><span>C 100</span><span>L* 55 a* −37 b* −50</span></li>
+              <li class="fan-card" style="--i: 2; --ink: #d6007a"><span class="fan-ink"></span><b>Magenta</b><span>M 100</span><span>L* 48 a* 74 b* −3</span></li>
+              <li class="fan-card" style="--i: 3; --ink: #ffe600"><span class="fan-ink"></span><b>Yellow</b><span>Y 100</span><span>L* 89 a* −5 b* 93</span></li>
+              <li class="fan-card" style="--i: 4; --ink: #df2a2e"><span class="fan-ink"></span><b>Red</b><span>M 100 Y 100</span><span>L* 47 a* 68 b* 48</span></li>
+              <li class="fan-card" style="--i: 5; --ink: #009a5b"><span class="fan-ink"></span><b>Green</b><span>C 100 Y 100</span><span>L* 50 a* −65 b* 27</span></li>
+              <li class="fan-card" style="--i: 6; --ink: #2c3487"><span class="fan-ink"></span><b>Blue</b><span>C 100 M 100</span><span>L* 24 a* 22 b* −46</span></li>
+              <li class="fan-card" style="--i: 7; --ink: #2a2827"><span class="fan-ink"></span><b>Black</b><span>K 100</span><span>L* 16 a* 0 b* 0</span></li>
+          </ol>
+          <figcaption class="small">Process colour targets for coated paper, ISO 12647-2:2004</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -468,8 +478,9 @@
     </figure>
   </dialog>
 
-  <script src="assets/js/press.js?v=27" defer></script>
-  <script src="assets/js/main.js?v=27" defer></script>
-  <script src="assets/js/effects.js?v=27" defer></script>
+  <script src="assets/js/press.js?v=28" defer></script>
+  <script src="assets/js/pressline.js?v=28" defer></script>
+  <script src="assets/js/main.js?v=28" defer></script>
+  <script src="assets/js/effects.js?v=28" defer></script>
 </body>
 </html>
