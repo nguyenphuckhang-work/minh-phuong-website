@@ -212,6 +212,29 @@ Tất cả bằng CSS + JavaScript thuần, tự tắt nếu máy người xem b
 - Hai màu pha (vàng kim, cam) chỉ để minh họa, không phải màu cố định của máy.
 - Link xem thử: https://minh-phuong-website.vercel.app/ (đăng từ máy bằng `vercel deploy --prod`, có `noindex` trên địa chỉ `.vercel.app`). Link GitHub Pages cũ chưa có mô hình cho tới khi đẩy code lên GitHub.
 
+## 5k. Vẽ lại thành máy offset tờ rời (03/11/2026)
+
+- Góp ý của sếp: máy của Minh Phương là máy in offset, bản trước nhìn giống máy in flexo. Đã vẽ lại toàn bộ theo cấu tạo máy offset tờ rời 6 màu có tráng phủ và UV.
+- Mỗi đơn vị in nhìn từ hông máy, đã bỏ tấm che: cụm lô mực nhiều lô lấy mực từ máng mực, cụm lô nước có máng nước, ống bản, ống cao su và ống ép in cỡ đôi. Giữa các đơn vị có trống chuyển tờ cỡ ba dạng khung xương, nên tờ in đi lượn sóng, kẹp bằng tay kẹp.
+- Thứ tự quanh ống bản đúng chiều quay: in xong sang ống cao su thì gặp lô nước trước, rồi mới tới các lô chà mực.
+- Đơn vị tráng phủ thay cụm lô mực bằng lô anilox và dao gạt kiểu buồng kín. Sau đó xích ra giấy kéo tờ dưới đèn UV rồi thả xuống bàn ra giấy.
+- Đơn vị số 1 có chữ A đến E chỉ vào lô mực, lô nước, ống bản, ống cao su, ống ép in, kèm chú thích góc trái. Đoạn mô tả dưới tiêu đề Nhà xưởng viết lại theo nguyên lý offset.
+- Phần Nhà xưởng đưa lên thêm một mục, nay đứng trước Gia công. Menu đổi theo.
+- Góp ý tiếp: bên trong mỗi đơn vị rối mắt. Đã thử vẽ lại kiểu hình cắt phẳng như catalogue Heidelberg nhưng không đẹp bằng, nên giữ kiểu 3D và chỉ rút cụm lô mực từ 16 xuống 8 lô: máng mực, lô lấy mực, một lô truyền, 2 lô đánh mực, 3 lô chà bản. Lô nước giữ 3 lô.
+- Vẽ rõ bản kẽm: tấm kẽm nhôm màu xanh nhạt quấn quanh ống bản, hẹp hơn ống, hai mép gập vào khe kẹp bản, trên mặt kẽm có hình in theo màu mực của đơn vị đó. Chú thích C đổi thành "Bản kẽm trên ống bản".
+- Cho rõ là in tờ rời, không phải in cuộn: tờ in ngắn lại để giữa hai tờ luôn có khe hở, lề trắng quanh tờ rộng hơn, mỗi tờ có viền mép riêng. Tay kẹp trên ống ép in và trống chuyển tờ quay khớp đúng mép đầu từng tờ; khe của ống cao su và bản kẽm đi qua chỗ ép đúng lúc khe hở giữa hai tờ đi qua.
+- Tham khảo thêm: catalogue Speedmaster CX 104 của Heidelberg (hình cắt ngang trang 18-19).
+- Tham khảo: bài đánh giá Speedmaster CX 102 của PrintWeek, bảng thông số CX 102 của Heidelberg, bài hướng dẫn cấu tạo máy in của IS&T, tài liệu ống cao su của Ink Systems.
+
+## 5l. Viết lại chữ cho chuẩn SEO (06/11/2026)
+
+- Yêu cầu: viết lại chữ cả tiếng Anh và tiếng Việt cho chuẩn SEO, không dính giọng văn AI, gọn nhưng mỗi câu đủ ý.
+- Tiêu đề trang: "Minh Phuong Printing | Packaging printing company in Vietnam" và "In Minh Phương | Công ty in bao bì, in hộp giấy tại TP.HCM". Mô tả trang khoảng 155 ký tự, nêu hộp giấy, hộp quà cứng, nhãn, tạp chí, máy in offset Heidelberg và các chứng nhận.
+- Tiêu đề lớn đầu trang đổi từ câu khẩu hiệu sang "Paper packaging printing in Ho Chi Minh City" / "In bao bì giấy tại TP. Hồ Chí Minh".
+- Tiêu đề các mục gọi đúng tên việc và chứa từ khóa: hộp giấy, hộp quà, nhãn; mẫu bao bì đã in; nhà xưởng và máy in offset Heidelberg; gia công sau in (cán màng, ép kim, dập nổi, UV); quản lý màu theo ISO 12647; quy trình sản xuất; các chứng nhận; liên hệ. Bỏ dấu chấm cuối tiêu đề.
+- Bỏ các câu kiểu quảng cáo như "Từ tờ giấy trắng thành chiếc hộp đáng giữ lại", "Những chi tiết khiến người ta muốn cầm hộp lên". Các câu cụt (chỉ liệt kê, không có động từ) viết lại thành câu đủ chủ ngữ, vị ngữ.
+- Thêm mô tả công ty vào dữ liệu có cấu trúc (JSON-LD) ở cả hai bản. Không thêm số liệu hay cam kết mới.
+
 ## 6. Còn chờ
 
 - Logo bản gốc dạng vector (đang dùng PNG 307×76)
